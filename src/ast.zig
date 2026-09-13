@@ -51,4 +51,8 @@ pub const Statement = union(enum) {
         then_branch: *Statement,
         else_branch: ?*Statement,
     },
+    while_statement: struct {
+        condition: *Expression,
+        body: *Statement,
+    },
 };
